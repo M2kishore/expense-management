@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single"
+        android:id="@+id/group1">
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home">
+        </item>
+        <item android:id="@+id/nav_drawer_dashboard"
+            android:icon="@drawable/ic_baseline_dashboard_24"
+            android:title="Dashboard">
+        </item>
+        <item android:id="@+id/nav_drawer_statistics"
+            android:icon="@drawable/ic_baseline_pie_chart_24"
+            android:title="Statistics">
+        </item>
+        <item android:id="@+id/nav_drawer_settings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="Settings">
+        </item>
+
+        </group>
+
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group2">
+        <item android:id="@+id/nav_Policy"
+            android:icon="@drawable/ic_baseline_policy_24"
+            android:title="Privacy Policy">
+        </item>
+        <item android:id="@+id/nav_share"
+            android:icon="@drawable/ic_baseline_share_24"
+            android:title="Share">
+        </item>
+        <item android:id="@+id/nav_aboutus"
+            android:icon="@drawable/ic_baseline_people_24"
+            android:title="About Us">
+        </item>
+        <item android:id="@+id/nav_donateus"
+            android:icon="@drawable/ic_baseline_attach_money_24"
+            android:title="Buy us a Coffee! (Donate)">
+        </item>
+    </group>
+
+</menu>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="50dp"
+
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@drawable/layout_edit_form"
+    android:orientation="vertical">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter task name"
+        android:maxLength="30"
+        android:layout_marginTop="25dp"
+        android:id="@+id/et1"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Amount"
+        android:layout_marginTop="25dp"
+        android:inputType="number"
+        android:maxLength="7"
+        android:layout_below="@id/et1"
+        android:id="@+id/et2"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et3"
+        android:layout_marginTop="25dp"
+        android:hint="Pick a Date"
+        android:layout_below="@id/et2"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt1"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/et2"
+        android:text="DATE"
+        android:background="@android:color/holo_orange_light"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/et3"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/et4"
+        android:hint="Pick a Time"
+        android:layout_below="@id/et3"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/bt2"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/et3"
+        android:text="TIME"
+        android:background="@android:color/holo_blue_light"
+        android:layout_toRightOf="@id/et4"/>
+
+     <Spinner
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="35dp"
+         android:id="@+id/sp1"
+         android:layout_below="@id/bt2"
+         />
+
+</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="ADD to LIST"
+
+            android:background="#70EF6B"
+
+            android:id="@+id/bt3"/>
+    </LinearLayout>
+
+</LinearLayout>
