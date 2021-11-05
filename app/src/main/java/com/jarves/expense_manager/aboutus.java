@@ -1,11 +1,9 @@
-package com.jarves.navigationdrawer;
+package com.jarves.expense_manager;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.os.Bundle;
-import android.provider.CalendarContract;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;

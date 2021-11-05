@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jarves.navigationdrawer" >
+    package="com.jarves.expense_manager" >
 
     <application
         android:allowBackup="true"
@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name=".aboutus" >
+        <activity android:name="com.jarves.expense_manager.aboutus" >
         </activity>
-        <activity android:name=".DashboardActivity" />
-        <activity android:name=".CreateTaskActivity" />
-        <activity android:name=".ShowTaskActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".StatisticsActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.jarves.expense_manager.dashboard.DashboardActivity" />
+        <activity android:name="com.jarves.expense_manager.dashboard.CreateTaskActivity" />
+        <activity android:name="com.jarves.expense_manager.dashboard.ShowTaskActivity" />
+        <activity android:name="com.jarves.expense_manager.SettingsActivity" />
+        <activity android:name="com.jarves.expense_manager.StatisticsActivity" />
+        <activity android:name="com.jarves.expense_manager.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

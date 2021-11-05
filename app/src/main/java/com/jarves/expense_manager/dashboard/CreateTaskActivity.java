@@ -1,4 +1,4 @@
-package com.jarves.navigationdrawer;
+package com.jarves.expense_manager.dashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,9 +15,10 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import com.jarves.expense_manager.R;
 
 import java.util.Calendar;
 
@@ -100,7 +101,7 @@ public class CreateTaskActivity extends AppCompatActivity implements DatePickerD
 
                 if( !(tname.isEmpty() || amt.isEmpty() || d.isEmpty() || t.isEmpty() ) )
                 {
-                    Intent intent=new Intent(getApplicationContext(),ShowTaskActivity.class);
+                    Intent intent=new Intent(getApplicationContext(), ShowTaskActivity.class);
                     intent.putExtra("task",tname);
                     intent.putExtra("amount",amt);
                     intent.putExtra("category",cat);

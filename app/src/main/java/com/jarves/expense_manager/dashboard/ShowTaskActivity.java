@@ -1,9 +1,11 @@
-package com.jarves.navigationdrawer;
+package com.jarves.expense_manager.dashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.jarves.expense_manager.R;
 
 public class ShowTaskActivity extends AppCompatActivity {
 

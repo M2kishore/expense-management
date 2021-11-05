@@ -1,4 +1,4 @@
-package com.jarves.navigationdrawer;
+package com.jarves.expense_manager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
@@ -11,11 +11,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.google.android.material.navigation.NavigationView;
+import com.jarves.expense_manager.dashboard.DashboardActivity;
 
 public class MainActivity extends AppCompatActivity {
 

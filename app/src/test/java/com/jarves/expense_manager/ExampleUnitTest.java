@@ -1,4 +1,4 @@
-package com.jarves.navigationdrawer;
+package com.jarves.expense_manager;
 
 import org.junit.Test;
 

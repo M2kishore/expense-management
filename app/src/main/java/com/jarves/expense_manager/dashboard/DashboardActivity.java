@@ -1,15 +1,13 @@
-package com.jarves.navigationdrawer;
+package com.jarves.expense_manager.dashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toolbar;
 
 import com.google.android.material.tabs.TabLayout;
+import com.jarves.expense_manager.R;
+import com.jarves.expense_manager.dashboard.adapters.BudgetAdapter;
 
 public class DashboardActivity extends AppCompatActivity{
     TabLayout tabLayout;
