@@ -5,12 +5,23 @@ public class Task {
     int amount;
     Date date;
     Time time;
+    String category;
+    boolean isComplete = false;
 
-    public Task(String name, int amount, Date date, Time time) {
+    public Task(String name, int amount,String category, Date date, Time time) {
         this.name = name;
         this.amount = amount;
         this.date = date;
         this.time = time;
+        this.category = category;
+    }
+
+    public boolean isComplete() {
+        return isComplete;
+    }
+
+    public void setComplete(boolean complete) {
+        isComplete = complete;
     }
 
     public String getName() {

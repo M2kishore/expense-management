@@ -15,42 +15,29 @@ import com.jarves.expense_manager.R;
 import com.jarves.expense_manager.dashboard.CreateTaskActivity;
 import com.jarves.expense_manager.dashboard.DashboardActivity;
 import com.jarves.expense_manager.dashboard.adapters.TaskAdapter;
-import com.jarves.expense_manager.dashboard.class_components.Date;
-import com.jarves.expense_manager.dashboard.class_components.Task;
-import com.jarves.expense_manager.dashboard.class_components.Time;
+import com.jarves.expense_manager.dashboard.class_components.TasksList;
 
-import java.util.ArrayList;
-
-public class PendingFragment<task1, task2> extends Fragment {
+public class PendingFragment extends Fragment {
     FloatingActionButton createButton;
     ListView listView;
-    String[] maintitle ={
-            "Tuton Fee","Mess Fee",
-            "Travel","Grocery",
-            "Milk",
-    };
-
-    String[] subtitle ={
-            "10,000","100",
-            "500","1000",
-            "250",
-    };
-    Task task1 = new Task("Tution Fee",250,new Date(12,2,2221), new Time(11,12));
-    Task task2 = new Task("Gym Fee",2500,new Date(11,2,2021), new Time(13,2));
-    ArrayList<Task> task = new ArrayList<Task>();
+    //test
+    TasksList tasksList;
+    //test
     public PendingFragment(){
 
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //test
+        tasksList = new TasksList();
+        tasksList.CreateSampleTasks();
+        //test
         View view = inflater.inflate(R.layout.fragment_pending, container, false);
-        task.add(task1);
-        task.add(task2);
         listView = view.findViewById(R.id.list_view);
         createButton = view.findViewById(R.id.create_button);
 
-        TaskAdapter taskAdapter = new TaskAdapter((DashboardActivity)getActivity(), task);
+        TaskAdapter taskAdapter = new TaskAdapter((DashboardActivity)getActivity(), tasksList.getTasksPending());
         listView.setAdapter(taskAdapter);
 
         createButton.setOnClickListener(new View.OnClickListener() {
