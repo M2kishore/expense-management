@@ -2,11 +2,11 @@ package com.jarves.expense_manager.dashboard.class_components;
 
 public class Time {
     int hour;
-    int minutes;
+    int minute;
 
-    public Time(int hour, int minutes) {
+    public Time(int hour, int minute) {
         this.hour = hour;
-        this.minutes = minutes;
+        this.minute = minute;
     }
 
     public int getHour() {
@@ -17,11 +17,11 @@ public class Time {
         this.hour = hour;
     }
 
-    public int getMinutes() {
-        return minutes;
+    public int getMinute() {
+        return minute;
     }
 
-    public void setMinutes(int minutes) {
-        this.minutes = minutes;
+    public void setMinute(int minute) {
+        this.minute = minute;
     }
 }

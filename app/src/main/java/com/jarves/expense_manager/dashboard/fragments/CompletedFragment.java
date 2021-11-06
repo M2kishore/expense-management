@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,36 +17,49 @@ import com.jarves.expense_manager.R;
 import com.jarves.expense_manager.dashboard.CreateTaskActivity;
 import com.jarves.expense_manager.dashboard.DashboardActivity;
 import com.jarves.expense_manager.dashboard.adapters.TaskAdapter;
-import com.jarves.expense_manager.dashboard.class_components.TasksList;
+import com.jarves.expense_manager.dashboard.class_components.Date;
+import com.jarves.expense_manager.dashboard.class_components.Task;
+import com.jarves.expense_manager.dashboard.class_components.Time;
+import com.jarves.expense_manager.database.Database;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class CompletedFragment extends Fragment {
     FloatingActionButton createButton;
     ListView listView;
-    //test
-    TasksList tasksList;
-    //test
+    ArrayList<Task> tasks;
     public  CompletedFragment(){
 
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         //test
-        tasksList = new TasksList();
-        tasksList.CreateSampleTasks();
+        Database database = new Database(getContext());
+        tasks = database.getTasks();
+
+        for(int i=0;i<tasks.size();i++){
+            Task task = tasks.get(i);
+            if(!task.isComplete()){
+                tasks.remove(i);
+            }
+        }
+
         //test
         View view = inflater.inflate(R.layout.fragment_pending, container, false);
         listView = view.findViewById(R.id.list_view);
         createButton = view.findViewById(R.id.create_button);
 
-        TaskAdapter taskAdapter = new TaskAdapter((DashboardActivity) getActivity(), tasksList.getTasksCompleted());
+        TaskAdapter taskAdapter = new TaskAdapter(getActivity(), tasks);
         listView.setAdapter(taskAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                //item click to show detailed task
             }
         });
 
