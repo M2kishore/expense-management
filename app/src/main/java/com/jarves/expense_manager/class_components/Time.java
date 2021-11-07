@@ -1,4 +1,4 @@
-package com.jarves.expense_manager.dashboard.class_components;
+package com.jarves.expense_manager.class_components;
 
 public class Time {
     int hour;

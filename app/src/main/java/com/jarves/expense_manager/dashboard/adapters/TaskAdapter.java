@@ -1,7 +1,6 @@
 package com.jarves.expense_manager.dashboard.adapters;
 
 import android.app.Activity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import com.jarves.expense_manager.R;
-import com.jarves.expense_manager.dashboard.DashboardActivity;
-import com.jarves.expense_manager.dashboard.class_components.Task;
+import com.jarves.expense_manager.class_components.Task;
 
 import java.util.ArrayList;
 

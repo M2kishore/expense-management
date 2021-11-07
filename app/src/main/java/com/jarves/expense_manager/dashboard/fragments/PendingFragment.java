@@ -14,7 +14,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.jarves.expense_manager.R;
 import com.jarves.expense_manager.dashboard.CreateTaskActivity;
 import com.jarves.expense_manager.dashboard.adapters.TaskAdapter;
-import com.jarves.expense_manager.dashboard.class_components.Task;
+import com.jarves.expense_manager.class_components.Task;
 import com.jarves.expense_manager.database.Database;
 
 import java.util.ArrayList;
@@ -31,16 +31,10 @@ public class PendingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //test
-        Database database = new Database(getContext());
-        tasks = database.getTasks();
-        for (int i = 0; i < tasks.size(); i++) {
-            Task task = tasks.get(i);
-            if (task.isComplete()) {
-                tasks.add(task);
-            }
-        }
-            //test
+
+            Database database = new Database(getContext());
+            tasks = database.getTasksPending();
+
             View view = inflater.inflate(R.layout.fragment_pending, container, false);
             listView = view.findViewById(R.id.list_view);
             createButton = view.findViewById(R.id.create_button);

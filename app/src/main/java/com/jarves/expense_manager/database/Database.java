@@ -6,9 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.jarves.expense_manager.dashboard.class_components.Task;
-import com.jarves.expense_manager.dashboard.class_components.Date;
-import com.jarves.expense_manager.dashboard.class_components.Time;
+import com.jarves.expense_manager.class_components.Task;
+import com.jarves.expense_manager.class_components.Date;
+import com.jarves.expense_manager.class_components.Time;
 
 import java.util.ArrayList;
 
@@ -77,13 +77,13 @@ public class Database extends SQLiteOpenHelper {
                 Time time = new Time(Integer.parseInt(cursor.getString(7)),
                         Integer.parseInt(cursor.getString(8)));
 
-
-                tasks.add(new Task(cursor.getString(1),
+                Task task = new Task(cursor.getString(1),
                         Integer.parseInt(cursor.getString(3)),
                         cursor.getString(2),
                         date,
-                        time
-                        ));
+                        time);
+                task.setComplete(Boolean.parseBoolean(cursor.getString(9)));
+                tasks.add(task);
             }while(cursor.moveToNext());
         }
         cursor.close();
@@ -96,7 +96,28 @@ public class Database extends SQLiteOpenHelper {
         database.delete(TABLE_NAME,"name=?", new String[]{name});
         database.close();
     }
-
+    public ArrayList<Task> getTasksCompleted(){
+        ArrayList<Task> tasks = getTasks();
+        ArrayList<Task> completedTasks = new ArrayList<>();
+        for(int i=0;i<tasks.size();i++){
+            Task task = tasks.get(i);
+            if(task.isComplete()){
+                completedTasks.add(task);
+            }
+        }
+        return completedTasks;
+    }
+    public ArrayList<Task> getTasksPending(){
+        ArrayList<Task> tasks = getTasks();
+        ArrayList<Task> pendingTasks = new ArrayList<>();
+        for(int i=0;i<tasks.size();i++){
+            Task task = tasks.get(i);
+            if(!task.isComplete()){
+                pendingTasks.add(task);
+            }
+        }
+        return pendingTasks;
+    }
     @Override
     public void onUpgrade(SQLiteDatabase database, int i, int i1) {
         database.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);

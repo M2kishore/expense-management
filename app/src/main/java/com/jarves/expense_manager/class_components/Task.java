@@ -1,4 +1,4 @@
-package com.jarves.expense_manager.dashboard.class_components;
+package com.jarves.expense_manager.class_components;
 
 public class Task {
     String name;
@@ -71,6 +71,8 @@ public class Task {
                 ", amount=" + amount +
                 ", date=" + date +
                 ", time=" + time +
+                ", category='" + category + '\'' +
+                ", isComplete=" + isComplete +
                 '}';
     }
 }
