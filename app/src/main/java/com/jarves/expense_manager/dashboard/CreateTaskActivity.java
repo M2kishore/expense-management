@@ -19,6 +19,10 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.jarves.expense_manager.R;
+import com.jarves.expense_manager.class_components.Date;
+import com.jarves.expense_manager.class_components.Task;
+import com.jarves.expense_manager.class_components.Time;
+import com.jarves.expense_manager.database.Database;
 
 import java.util.Calendar;
 
@@ -28,6 +32,7 @@ public class CreateTaskActivity extends AppCompatActivity implements DatePickerD
    EditText date,time,ed1,ed2;
    Spinner sp;
    String tname,amt,cat,d,t;
+   int dat,y,m,hr,min;
    RelativeLayout rl;
    String[] category={"ELECTRICITY","RECHARGE","GYM"};
 
@@ -46,6 +51,8 @@ public class CreateTaskActivity extends AppCompatActivity implements DatePickerD
 
 
         sp=findViewById(R.id.sp1);
+
+
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +75,8 @@ public class CreateTaskActivity extends AppCompatActivity implements DatePickerD
                 TimePickerDialog timePickerDialog=new TimePickerDialog(CreateTaskActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                        hr=i;
+                        min=i1;
                         time.setText(i+":"+i1);
                         t=time.getText().toString();
                     }
@@ -97,10 +106,15 @@ public class CreateTaskActivity extends AppCompatActivity implements DatePickerD
             public void onClick(View view) {
                 tname=ed1.getText().toString();
                 amt=ed2.getText().toString();
-
+                Database db = new Database(getApplicationContext()); //obj creation
 
                 if( !(tname.isEmpty() || amt.isEmpty() || d.isEmpty() || t.isEmpty() ) )
                 {
+                    //pushing to database
+
+                    Task crt=new Task(tname,Integer.parseInt(amt),cat,new Date(dat,m,y),new Time(hr,min));
+                    db.addNewTask(crt);
+
                     Intent intent=new Intent(getApplicationContext(), ShowTaskActivity.class);
                     intent.putExtra("task",tname);
                     intent.putExtra("amount",amt);
@@ -113,9 +127,17 @@ public class CreateTaskActivity extends AppCompatActivity implements DatePickerD
                 {
                     Toast.makeText(getApplicationContext(),"Fill all the Fields",Toast.LENGTH_SHORT).show();
                 }
+
+                tname="";
+                amt="";
+                d="";
+                cat="";
+                t="";
             }
 
         });
+
+
 
 
 
@@ -125,6 +147,9 @@ public class CreateTaskActivity extends AppCompatActivity implements DatePickerD
     @Override
     public void onDateSet(DatePicker datePicker, int year, int month, int da) {
         date.setText(year+"-"+(month-1)+"-"+da);
+        dat=da;
+        m=month-1;
+        y=year;
         d=date.getText().toString();
     }
 
