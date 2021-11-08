@@ -16,7 +16,8 @@
         <activity android:name="com.jarves.expense_manager.dashboard.ShowTaskActivity" />
         <activity android:name="com.jarves.expense_manager.SettingsActivity" />
         <activity android:name="com.jarves.expense_manager.StatisticsActivity" />
-        <activity android:name="com.jarves.expense_manager.MainActivity" />
+        <activity android:name="com.jarves.expense_manager.MainActivity"
+            android:exported="true"/>
         <activity
             android:name=".login"
             android:exported="true" />
