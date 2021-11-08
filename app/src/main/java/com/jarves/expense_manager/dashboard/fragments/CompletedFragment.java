@@ -5,15 +5,19 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.jarves.expense_manager.R;
 import com.jarves.expense_manager.dashboard.CreateTaskActivity;
+import com.jarves.expense_manager.dashboard.ShowTaskActivity;
 import com.jarves.expense_manager.dashboard.adapters.TaskAdapter;
 import com.jarves.expense_manager.class_components.Task;
 import com.jarves.expense_manager.database.Database;
@@ -29,7 +33,7 @@ public class CompletedFragment extends Fragment {
 
     }
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
 
@@ -43,10 +47,26 @@ public class CompletedFragment extends Fragment {
         TaskAdapter taskAdapter = new TaskAdapter(getActivity(), tasks);
         listView.setAdapter(taskAdapter);
 
+        //final String sh= String.valueOf(tasks.get(0));
+
+
+
+
+
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //item click to show detailed task
+               // String[] a ={"","34534535"};
+                //String[] ts=tasks.toArray(a);
+               // Toast.makeText(getContext(),a[1],Toast.LENGTH_SHORT).show();
+
+                Task task=tasks.get(i);
+                Toast.makeText(getContext(),task.toString(),Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(getActivity(), ShowTaskActivity.class);
+
+
+
             }
         });
 
