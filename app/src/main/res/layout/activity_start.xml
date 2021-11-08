@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".start"
+android:paddingRight="20dp"
+android:paddingBottom="20dp"
+android:paddingLeft="20dp"
+android:paddingTop="20dp"
+    >
+
+<TextView
+    android:id="@+id/textView"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="250dp"
+    android:gravity="center_horizontal"
+    android:text="Welcome to Expense Tracker"
+    android:textSize="50sp"
+    android:textStyle="bold"/>
+
+<TextView
+    android:id="@+id/textView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:gravity="center_horizontal"
+    android:text="Budgeting that works"
+    android:layout_below="@id/textView"
+    android:textSize="25sp"
+    android:textStyle="bold" />
+
+
+    <Button
+        android:layout_width="184dp"
+        android:layout_height="75dp"
+        android:onClick="startUsing"
+        android:text="Start Using"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
