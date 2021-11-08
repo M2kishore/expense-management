@@ -1,6 +1,8 @@
 package com.jarves.expense_manager;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -12,6 +14,7 @@ public class login extends AppCompatActivity {
 
     EditText un;
     EditText pwd;
+    String prevStarted = "prevStarted";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,18 @@ public class login extends AppCompatActivity {
             if(val){
                 Intent i = new Intent(this,MainActivity.class);
                 startActivity(i);
+
+                SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
+                SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                myEdit.putString("name", name);
+                myEdit.commit();
+
+                SharedPreferences sharedpreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putBoolean(prevStarted, Boolean.TRUE);
+                editor.apply();
+
+
             }
             else {
                 Toast.makeText(getApplicationContext(),
