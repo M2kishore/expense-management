@@ -5,6 +5,6 @@
 
     <color name="colorPrimary">#101010</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="backgroundColor">#FCFCFC</color>
+    <color name="backgroundColor">#FFFFFF</color>
     <color name="textColor">#000000</color>
 </resources>

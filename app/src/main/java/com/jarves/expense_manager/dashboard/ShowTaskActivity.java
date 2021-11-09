@@ -18,10 +18,10 @@ public class ShowTaskActivity extends AppCompatActivity {
         textview=findViewById(R.id.tv);
         Bundle b = getIntent().getExtras();
         t=b.getString("task");
-        amt=b.getString("amount");
+        /*amt=b.getString("amount");
         date=b.getString("date");
         time=b.getString("time");
-        cat=b.getString("category");
-        textview.setText(t+"\n"+amt+"\n"+date+"\n"+time+"\n"+cat);
+        cat=b.getString("category");*/
+        textview.setText(t);
     }
 }
