@@ -8,11 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.jarves.expense_manager.R;
 import com.jarves.expense_manager.dashboard.CreateTaskActivity;
+import com.jarves.expense_manager.dashboard.ShowTaskActivity;
 import com.jarves.expense_manager.dashboard.adapters.TaskAdapter;
 import com.jarves.expense_manager.class_components.Task;
 import com.jarves.expense_manager.database.Database;
@@ -50,6 +52,18 @@ public class PendingFragment extends Fragment {
                     startActivity(intent);
                 }
             });
+
+         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+              @Override
+              public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                  Task task=tasks.get(position);
+                  task.setComplete(true);
+                  Database db=new Database(getContext());
+                  db.updateTask(task);
+                  return true;
+              }
+          });
+
             return view;
         }
     }

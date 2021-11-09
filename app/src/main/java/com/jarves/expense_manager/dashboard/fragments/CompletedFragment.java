@@ -57,13 +57,13 @@ public class CompletedFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-               // String[] a ={"","34534535"};
-                //String[] ts=tasks.toArray(a);
-               // Toast.makeText(getContext(),a[1],Toast.LENGTH_SHORT).show();
+
 
                 Task task=tasks.get(i);
-                Toast.makeText(getContext(),task.toString(),Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),task.toString(),Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(getActivity(), ShowTaskActivity.class);
+                intent.putExtra("task",task.toString());
+                startActivity(intent);
 
 
 

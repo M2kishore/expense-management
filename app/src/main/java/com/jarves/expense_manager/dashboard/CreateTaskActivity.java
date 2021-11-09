@@ -115,12 +115,12 @@ public class CreateTaskActivity extends AppCompatActivity implements DatePickerD
                     Task crt=new Task(tname,Integer.parseInt(amt),cat,new Date(dat,m,y),new Time(hr,min));
                     db.addNewTask(crt);
 
-                    Intent intent=new Intent(getApplicationContext(), ShowTaskActivity.class);
-                    intent.putExtra("task",tname);
+                    Intent intent=new Intent(getApplicationContext(),DashboardActivity.class);
+                    /*intent.putExtra("task",tname);
                     intent.putExtra("amount",amt);
                     intent.putExtra("category",cat);
                     intent.putExtra("date",d);
-                    intent.putExtra("time",t);
+                    intent.putExtra("time",t);*/
                     startActivity(intent);
               }
                 else
