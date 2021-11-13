@@ -5,29 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="50dp"
-    android:gravity="center"
-    tools:context=".view">
-<androidx.cardview.widget.CardView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardElevation="5dp"
-    app:cardCornerRadius="10dp"
-    android:layout_margin="20dp"
-    android:background="@color/backgroundColor"
+    android:gravity="center">
 
-    app:cardMaxElevation="12dp"
-    app:cardPreventCornerOverlap="true"
-    app:cardUseCompatPadding="true"
->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/backgroundColor"
-        android:textSize="20dp"
-        android:id="@+id/tv"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="270dp"
+        android:layout_height="274dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+
+        android:layout_marginBottom="10dp"
+        android:padding="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/backgroundColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
-
-</androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>

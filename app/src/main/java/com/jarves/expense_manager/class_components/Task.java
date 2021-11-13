@@ -69,12 +69,12 @@ public class Task {
 
     @Override
     public String toString() {
-        return "  Task\n" +
-                "  name='" +name+'\'' +"\n"+
-                "  amount="+ amount +"\n"+
-                "  date="+ date.year+"-"+date.month+"-"+date.day+"\n"+
-                "  time=" + time.hour+":"+time.minute+"\n"+
-                "  category='" + category + '\'' +"\n"+
-                "  isComplete=" + isComplete;
+        return "Task \n"+
+                "name= " + name+"\n"+
+                "amount= "+ amount +"\n"+
+                "date= "+ date.year+"-"+date.month+"-"+date.day+"\n"+
+                "time= " + time.hour+":"+time.minute+"\n"+
+                "category= " + category+"\n"+
+                "isComplete=" + isComplete ;
     }
 }

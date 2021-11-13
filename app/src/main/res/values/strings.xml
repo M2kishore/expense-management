@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Expense Manager</string>
+    <string name="channel_name">Reminder</string>
+    <string name="channel_description">reminder during the Due date</string>
 </resources>

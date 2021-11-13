@@ -26,47 +26,6 @@ public class DashboardActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-
-        //database
-        //test
-        Database database = new Database(getApplicationContext());
-
-        Task task1 = new Task("Tution Fee",250,"Knowledge",new Date(12,5,2221), new Time(11,12));
-        Task task2 = new Task("Gym Fee",2500,"Health",new Date(11,7,2021),new Time(11,2));
-        Task task3 = new Task("Current Bill",500,"Needs",new Date(12,1,2221), new Time(11,12));
-        Task task4 = new Task("Mobile Recharge",550,"Needs",new Date(11,2,2021), new Time(11,2));
-
-        database.deleteTask("Current Bill");
-        database.deleteTask("Mobile Recharge");
-        database.deleteTask("Tution Fee");
-        database.deleteTask("Gym Fee");
-
-        task4.setComplete(true);
-        task3.setComplete(true);
-
-        database.addNewTask(task1);
-        database.addNewTask(task2);
-        database.addNewTask(task3);
-        database.addNewTask(task4);
-
-
-        tasks = database.getTasks();
-        Task t1 = tasks.get(0);
-        Task t2 = tasks.get(1);
-        Task t3 = tasks.get(2);
-        Task t4 = tasks.get(3);
-
-        Log.d("tmob", t4.toString());
-        Log.d("tgym", t2.toString());
-        Log.d("ttution", t1.toString());
-        Log.d("tcurrent", t3.toString());
-        //database
-
-
-
-
-
-
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.view_pager);
         tabLayout.addTab(tabLayout.newTab().setText("Pending"));

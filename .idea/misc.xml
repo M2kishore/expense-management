@@ -3,27 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/raghul/AndroidStudioProjects/expense-management/app/src/main/res/layout/activity_aboutus.xml" value="0.15307971014492755" />
-        <entry key="..\:/Users/raghul/AndroidStudioProjects/expense-management/app/src/main/res/layout/activity_create_task.xml" value="0.17300724637681159" />
-        <entry key="..\:/Users/raghul/AndroidStudioProjects/expense-management/app/src/main/res/layout/activity_dashboard.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/raghul/AndroidStudioProjects/expense-management/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/raghul/AndroidStudioProjects/expense-management/app/src/main/res/layout/activity_navigation_one.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/raghul/AndroidStudioProjects/expense-management/app/src/main/res/layout/activity_navigation_two.xml" value="0.1" />
-        <entry key="..\:/Users/raghul/AndroidStudioProjects/expense-management/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/raghul/AndroidStudioProjects/expense-management/app/src/main/res/layout/activity_start.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/raghul/AndroidStudioProjects/expense-management/app/src/main/res/layout/activity_view_task.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/raghul/AndroidStudioProjects/expense-management/app/src/main/res/layout/fragment_completed.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/raghul/AndroidStudioProjects/expense-management/app/src/main/res/layout/fragment_pending.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/raghul/AndroidStudioProjects/expense-management/app/src/main/res/layout/header.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/raghul/AndroidStudioProjects/expense-management/app/src/main/res/layout/layout_create_task.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/raghul/AndroidStudioProjects/expense-management/app/src/main/res/layout/task_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/amrita-android-app/expense-management/app/src/main/res/layout/activity_view_task.xml" value="0.25416666666666665" />
       </map>
     </option>
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
-  </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
   </component>
 </project>
