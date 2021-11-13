@@ -10,10 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.jarves.expense_manager.R;
 import com.jarves.expense_manager.dashboard.CreateTaskActivity;
+import com.jarves.expense_manager.dashboard.DashboardActivity;
 import com.jarves.expense_manager.dashboard.ShowTaskActivity;
 import com.jarves.expense_manager.dashboard.adapters.TaskAdapter;
 import com.jarves.expense_manager.class_components.Task;
@@ -52,6 +54,16 @@ public class PendingFragment extends Fragment {
                     startActivity(intent);
                 }
             });
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    Task task=tasks.get(i);
+                    //Toast.makeText(getContext(),task.toString(),Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(getActivity(), ShowTaskActivity.class);
+                    intent.putExtra("task",task.toString());
+                    startActivity(intent);
+                }
+            });
 
          listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
               @Override
@@ -60,6 +72,9 @@ public class PendingFragment extends Fragment {
                   task.setComplete(true);
                   Database db=new Database(getContext());
                   db.updateTask(task);
+                  Intent intent = new Intent(getActivity(), DashboardActivity.class);
+                  Toast.makeText(getContext(), "Task marked as completed", Toast.LENGTH_LONG).show();
+                  startActivity(intent);
                   return true;
               }
           });

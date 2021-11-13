@@ -2,8 +2,11 @@ package com.jarves.expense_manager.dashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlarmManager;
 import android.app.DatePickerDialog;
+import android.app.PendingIntent;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +21,7 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.jarves.expense_manager.NotificationReceiver;
 import com.jarves.expense_manager.R;
 import com.jarves.expense_manager.class_components.Date;
 import com.jarves.expense_manager.class_components.Task;
@@ -36,6 +40,8 @@ public class CreateTaskActivity extends AppCompatActivity implements DatePickerD
    RelativeLayout rl;
    String[] category={"ELECTRICITY","RECHARGE","GYM"};
 
+   AlarmManager alarmManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,8 +57,6 @@ public class CreateTaskActivity extends AppCompatActivity implements DatePickerD
 
 
         sp=findViewById(R.id.sp1);
-
-
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
