@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/amrita-android-app/expense-management/app/src/main/res/layout/activity_navigation_one.xml" value="0.2572463768115942" />
         <entry key="..\:/amrita-android-app/expense-management/app/src/main/res/layout/activity_view_task.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
