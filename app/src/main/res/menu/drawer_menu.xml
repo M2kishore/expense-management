@@ -40,6 +40,10 @@
             android:icon="@drawable/ic_baseline_attach_money_24"
             android:title="Buy us a Coffee! (Donate)">
         </item>
+        <item android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
+            android:title="Logout">
+        </item>
     </group>
 
 </menu>
