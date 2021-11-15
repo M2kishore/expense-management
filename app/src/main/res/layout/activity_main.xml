@@ -43,6 +43,13 @@
                 android:src="@drawable/img"
                 android:layout_gravity="center"/>
 
+            <Button
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:onClick="logout"
+                android:text="Logout" />
+
 
         </LinearLayout>
     </ScrollView>
