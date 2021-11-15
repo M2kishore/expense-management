@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     tools:context=".login">
 
         <TextView
@@ -13,6 +14,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="78dp"
             android:layout_marginEnd="162dp"
+            android:textColor="@color/textColor"
             android:text="Login"
             android:textSize="35dp" />
 
@@ -23,6 +25,7 @@
             android:inputType="text"
             android:hint = "Enter your username"
             android:focusable = "true"
+            android:textColor="@color/textColor"
             android:layout_alignParentLeft = "true"
             android:layout_alignParentStart = "true"
             android:layout_alignParentRight = "true"
@@ -42,6 +45,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
+            android:textColor="@color/textColor"
             android:ems="10"
             android:hint="Enter your password"
             android:inputType="textPassword" />

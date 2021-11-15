@@ -10,9 +10,10 @@
 <androidx.cardview.widget.CardView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardElevation="10dp"
-    app:cardCornerRadius="20dp"
-    android:layout_margin="10dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="20dp"
+    android:background="@color/backgroundColor"
 
     app:cardMaxElevation="12dp"
     app:cardPreventCornerOverlap="true"
@@ -23,8 +24,7 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textColor="@color/backgroundColor"
-        android:textSize="25dp"
-        android:textStyle="bold"
+        android:textSize="20dp"
         android:id="@+id/tv"/>
 
 
