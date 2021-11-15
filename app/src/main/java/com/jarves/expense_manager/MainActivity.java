@@ -87,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_aboutus:
                         Intent intent3 = new Intent(MainActivity.this , aboutus.class);
                         startActivity(intent3);
+                    case R.id.nav_logout:
+                        logout();
                         break;
 
 
@@ -155,5 +157,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         alarmManager.setExact(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), broadcast);
+    }
+    void logout(){
+        String prevStarted = "prevStarted";
+        SharedPreferences sharedpreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putBoolean(prevStarted, Boolean.FALSE);
+        editor.apply();
+        startActivity(new Intent(this, register.class));
     }
 }
