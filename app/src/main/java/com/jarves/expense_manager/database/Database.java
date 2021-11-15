@@ -123,4 +123,21 @@ public class Database extends SQLiteOpenHelper {
         database.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(database);
     }
+    public void updateTask(Task task){
+        SQLiteDatabase database = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put(NAME_COL,task.getName());
+        values.put(CATEGORY_COL,task.getCategory());
+        values.put(AMOUNT_COL,task.getAmount());
+        values.put(DATE_DAY_COL,task.getDate().getDay());
+        values.put(DATE_MONTH_COL,task.getDate().getMonth());
+        values.put(DATE_YEAR_COL,task.getDate().getYear());
+        values.put(TIME_HOUR_COL,task.getTime().getHour());
+        values.put(TIME_MINUTE_COL,task.getTime().getMinute());
+        values.put(COMPLETED_COL,Boolean.toString(task.isComplete()));
+
+        database.update(TABLE_NAME, values, "name=?", new String[]{task.getName()});
+        database.close();
+    }
 }

@@ -16,6 +16,8 @@ public class Task {
         this.category = category;
     }
 
+
+
     public String getCategory() {
         return category;
     }
@@ -29,6 +31,7 @@ public class Task {
     }
 
     public void setComplete(boolean complete) {
+
         isComplete = complete;
     }
 
@@ -66,13 +69,12 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
-                "name='" + name + '\'' +
-                ", amount=" + amount +
-                ", date=" + date +
-                ", time=" + time +
-                ", category='" + category + '\'' +
-                ", isComplete=" + isComplete +
-                '}';
+        return "Task \n"+
+                "name= " + name+"\n"+
+                "amount= "+ amount +"\n"+
+                "date= "+ date.year+"-"+date.month+"-"+date.day+"\n"+
+                "time= " + time.hour+":"+time.minute+"\n"+
+                "category= " + category+"\n"+
+                "isComplete=" + isComplete ;
     }
 }

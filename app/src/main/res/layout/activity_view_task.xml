@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="50dp"
-    android:gravity="center"
-    tools:context=".view">
+    android:gravity="center">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:id="@+id/tv"/>
-</LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="270dp"
+        android:layout_height="274dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+
+        android:layout_marginBottom="10dp"
+        android:padding="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/backgroundColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
