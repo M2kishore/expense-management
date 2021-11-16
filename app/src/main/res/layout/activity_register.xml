@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     tools:context=".register">
 
     <TextView
@@ -11,10 +12,12 @@
         android:layout_height = "wrap_content"
         android:id = "@+id/textview"
         android:textSize = "35dp"
+        android:textColor="@color/textColor"
         android:layout_alignParentTop = "true"
         android:layout_centerHorizontal = "true" />
     <EditText
         android:id="@+id/editText1"
+        android:textColor="@color/textColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -31,6 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="text"
+        android:textColor="@color/textColor"
         android:ems="10"
         android:id="@+id/editText2"
         android:layout_below="@+id/editText1"
@@ -46,6 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
+        android:textColor="@color/textColor"
         android:ems="10"
         android:id="@+id/editText4"
         android:layout_below="@+id/editText2"
@@ -59,6 +64,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/textColor"
         android:inputType="number"
         android:ems="10"
         android:id="@+id/editText5"
@@ -83,6 +89,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textview1"
         android:layout_below="@+id/button1"
+        android:textColor="@color/textColor"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:text="          Already have an account? LOGIN"
